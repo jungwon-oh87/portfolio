@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+.landing-svg-container{
+    /* border: 1px solid red; */
+    width: 700px;
+    height: 550px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.5;
+}
+
+.landing-svg-container > svg{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#balloon1, #balloon4{
+    animation: balloon-vertical 1s ease-in-out infinite alternate;
+    transform-origin: top;
+}
+
+#balloon2{
+    animation: balloon-vertical 2s ease-in-out infinite alternate;
+    transform-origin: top;
+    border: 1px solid red;
+}
+
+#balloon3{
+    animation: balloon-horizontal 1s ease infinite alternate;
+    transform-origin: top;
+}
+
+#hand{
+    animation: hand 2.5s ease-in-out infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+#leaf{
+    animation: leaf 3s ease-in-out infinite;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes balloon-vertical{
+    from{
+        transform: rotateX(0deg); 
+    }
+    to{
+        transform: rotateX(15deg);
+    }
+}
+
+@keyframes balloon-horizontal{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(15deg);
+    }
+}
+
+@keyframes hand{
+    0% { transform: rotate(0.0deg) }
+    10% { transform: rotate(5deg) }
+    20% { transform: rotate(-1deg) }
+    30% { transform: rotate(3deg) }
+    40% { transform: rotate(-1deg) }
+    50% { transform: rotate(5deg) }
+    60% { transform: rotate( 0.0deg) }
+   100% { transform: rotate( 0.0deg) }
+}
+
+@keyframes leaf{
+    0% { transform: rotate(0deg) }
+    10% { transform: rotate(1deg) }
+    20% { transform: rotate(2deg) }
+    30% { transform: rotate(3deg) }
+    40% { transform: rotate(-1deg) }
+    50% { transform: rotate(-2deg) }
+    60% { transform: rotate(-2deg) }
+   100% { transform: rotate(0deg) }
+}

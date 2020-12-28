@@ -39,14 +39,12 @@ body::-webkit-scrollbar{
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    /* display: none; */
 }
 .zoom #layer2{
     width: 100%;
     position: absolute;
     right: 0%;
     z-index: 9;
-    /* display: none; */
 }
 .zoom .zoom-text{
     position: absolute;
@@ -54,16 +52,14 @@ body::-webkit-scrollbar{
     text-align: center;
     width: 100%;
     transform: translateY(80%);
-    /* border: 1px solid red; */
 }
 .zoom .zoom-text .first-line{
-    /* font-size: 52px; */
     font-size: 3rem;
     font-weight: 800;
     text-align: left;
     margin-left: 15%;
     font-family: 'JetBrains', sans-serif;
-    color: white;
+    color: #fff;
     text-shadow: 2px 2px #ff0000;
 }
 .zoom .zoom-text .second-line{
@@ -72,9 +68,8 @@ body::-webkit-scrollbar{
     text-align: left;
     margin-left: 20%;
     font-family: 'JetBrains', sans-serif;
-    color: white;
+    color: #fff;
     text-shadow: 2px 2px #ff0000;
-    /* border: 3px solid orange; */
 }
 .zoom .zoom-text .third-line{
     font-size: 5rem;
@@ -83,7 +78,7 @@ body::-webkit-scrollbar{
     margin-left: 50%;
     /* border: 1px solid blue; */
     font-family: 'JetBrains', sans-serif;
-    color: white;
+    color: #fff;
     text-shadow: 2px 2px #ff0000;
 }
 

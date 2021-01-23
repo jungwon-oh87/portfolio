@@ -13,25 +13,6 @@ document.addEventListener('scroll', () => {
     layer2.style.width = (100 + scroll / 5) + '%';
     layer2.style.left = scroll / 50 + '%';
     zoomText.style.bottom = scroll / 10 + '%';
-    // if (screen.width > 1440) {
-    //     layer1.style.width = (100 + scroll / 5) + '%';
-    //     // console.log("layer1 width: ", layer1.style.width);
-    //     layer2.style.width = (100 + scroll / 5) + '%';
-    //     layer2.style.left = scroll / 50 + '%';
-    //     zoomText.style.bottom = scroll / 10 + '%';
-    // }
-    // else if (screen.width <= 1440) {
-    //     layer1.style.width = (100 + scroll / 15) + '%';
-    //     layer2.style.width = (100 + scroll / 15) + '%';
-    //     layer2.style.left = scroll / 100 + '%';
-    //     zoomText.style.bottom = scroll / 5 + '%';
-    // }
-    // else if (screen.width <= 1270) {
-    //     layer1.style.width = (100 + scroll / 15) + '%';
-    //     layer2.style.width = (100 + scroll / 15) + '%';
-    //     layer2.style.left = scroll / 100 + '%';
-    //     zoomText.style.bottom = scroll / 5 + '%';
-    // }
 })
 
 if (screen.width <= 1440) {

@@ -1,226 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Potta+One&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body{
-    overflow-y: scroll; 
-}
-
-body::-webkit-scrollbar{
-    display: none;
+    font-family: 'Poppins',
+        sans-serif;
 }
 
-/* zoom part */
-.zoom{
-    width: 100%;
-    height: 1000px; /* try vh*/
-    position: relative;
-    overflow: hidden;
-    background: url(./assets/bg.jpg);
-    background-size: cover;
-}
-
-.zoom::before{
-    content: '';
+.showcase {
     position: absolute;
-    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 200px;
-    z-index: 1000;
-    background: linear-gradient(transparent, #fff);
-}
-
-.zoom #layer1{
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-.zoom #layer2{
-    width: 100%;
-    position: absolute;
-    right: 0%;
-    z-index: 9;
-}
-.zoom .zoom-text{
-    position: absolute;
-    bottom: 20%;
-    text-align: center;
-    width: 100%;
-    transform: translateY(80%);
-}
-.zoom .zoom-text .first-line{
-    font-size: 3rem;
-    font-weight: 800;
-    text-align: left;
-    margin-left: 15%;
-    font-family: 'JetBrains', sans-serif;
-    color: #fff;
-    text-shadow: 2px 2px #ff0000;
-}
-.zoom .zoom-text .second-line{
-    font-size: 8rem;
-    font-weight: 800;
-    text-align: left;
-    margin-left: 20%;
-    font-family: 'JetBrains', sans-serif;
-    color: #fff;
-    text-shadow: 2px 2px #ff0000;
-}
-.zoom .zoom-text .third-line{
-    font-size: 5rem;
-    font-weight: 800;
-    text-align: left;
-    margin-left: 50%;
-    /* border: 1px solid blue; */
-    font-family: 'JetBrains', sans-serif;
-    color: #fff;
-    text-shadow: 2px 2px #ff0000;
-}
-
-
-/* navbar styling */
-.navbar{
-    position: fixed;
-    width: 100%;
-    background-color: #F50085;
-    padding: 12px 0;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.max-width{
-    max-width: 1100px;
-    padding: 0 80px;
-    margin: auto;
-}
-
-.navbar .max-width {
+    min-height: 100vh;
+    padding: 100px;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
 }
 
-.navbar .logo a{
-    color: #ffffff;
-    font-size: 36px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.navbar .menu li{
-    list-style: none;
-    display: inline-block;
-}
-
-.navbar .menu li a{
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 24px;
-}
-
-
-/* home-svg-container styling */
-.landing-svg-container{
-    width: 500px;
-    height: 350px;
-    /* position: absolute;
+.showcase
+    header {
+    position: absolute;
     top: 0;
-    right: 0; */
-    opacity: 0.5;
-}
-
-.landing-svg-container > svg{
+    left: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-#balloon1, #balloon4{
-    animation: balloon-vertical 1s ease-in-out infinite alternate;
-    transform-origin: top;
-}
-
-#balloon2{
-    animation: balloon-vertical 2s ease-in-out infinite alternate;
-    transform-origin: top;
-    border: 1px solid red;
+    padding: 40px
+        100px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#balloon3{
-    animation: balloon-horizontal 1s ease infinite alternate;
-    transform-origin: top;
+.showcase
+    header
+    .logo {
+    display: flex;
+    cursor: pointer;
+}
+.lastname {
+    margin: auto;
+    font-weight: 100;
+}
+.toggle {
+    cursor: pointer;
 }
 
-#hand{
-    animation: hand 2.5s ease-in-out infinite;
-    transform-origin: bottom;
-    transform-box: fill-box;
-}
-
-#leaf{
-    animation: leaf 3s ease-in-out infinite;
-    transform-origin: bottom;
-    transform-box: fill-box;
-}
-
-@keyframes balloon-vertical{
-    from{
-        transform: rotateX(0deg); 
-    }
-    to{
-        transform: rotateX(15deg);
-    }
-}
-
-@keyframes balloon-horizontal{
-    from{
-        transform: rotateY(0deg);
-    }
-    to{
-        transform: rotateY(15deg);
-    }
-}
-
-@keyframes hand{
-    0% { transform: rotate(0.0deg) }
-    10% { transform: rotate(5deg) }
-    20% { transform: rotate(-1deg) }
-    30% { transform: rotate(3deg) }
-    40% { transform: rotate(-1deg) }
-    50% { transform: rotate(5deg) }
-    60% { transform: rotate( 0.0deg) }
-   100% { transform: rotate( 0.0deg) }
-}
-
-@keyframes leaf{
-    0% { transform: rotate(0deg) }
-    10% { transform: rotate(1deg) }
-    20% { transform: rotate(2deg) }
-    30% { transform: rotate(3deg) }
-    40% { transform: rotate(-1deg) }
-    50% { transform: rotate(-2deg) }
-    60% { transform: rotate(-2deg) }
-   100% { transform: rotate(0deg) }
-}
-
-/* home section styling */
-.home {
+.showcase
+    video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    min-height: 500px;
-    font-family: 'Ubuntu', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    object-fit: cover;
+    opacity: 0.8;
 }
-.home-content-container{
-    border: 1px solid red;
+
+.showcase
+    .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 100vh;
+    background-color: #f5bc7b;
+    mix-blend-mode: overlay;
+}
+
+.showcase
+    .text {
+    position: relative;
+    z-index: 3;
+}
+
+.showcase
+    .text
+    p {
+    margin: 20px
+        0;
+}
+
+.showcase
+    .text
+    a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px
+        30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+.showcase
+    .text
+    a:hover {
+    letter-spacing: 4px;
 }

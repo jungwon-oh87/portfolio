@@ -1,23 +1,59 @@
-const layer1 = document.getElementById('layer1');
-const layer2 = document.getElementById('layer2');
-const zoomText = document.getElementById('zoom-text');
-let scroll = window.pageYOffset;
+var about_me_text = [
+    "Front-end Engineer",
+    "Deep Thinker",
+    "Javascript Enthusiast",
+    "Team Player",
+    "Believer",
+    "Proud Husband"
+];
 
+var curnt_sentence_index = 0;
 
-document.addEventListener('scroll', () => {
-    console.log("scroll: ", scroll);
-    var offset = window.pageYOffset;
-    scroll = offset;
-    layer1.style.width = (100 + scroll / 5) + '%';
-    // console.log("layer1 width: ", layer1.style.width);
-    layer2.style.width = (100 + scroll / 5) + '%';
-    layer2.style.left = scroll / 50 + '%';
-    zoomText.style.bottom = scroll / 10 + '%';
-})
+var curnt_char_idx = 0;
 
-if (screen.width <= 1440) {
-    layer1.style.width = 110 + '%';
-    layer2.style.width = 110 + '%';
-    // layer2.style.left = scroll / 100 + '%';
-    zoomText.style.bottom = 0 + '%';
+var interval_val;
+
+var el_text = document.getElementById("text");
+
+function type(){
+    var letters = about_me_text[curnt_sentence_index].substring(0,curnt_char_idx+1);
+
+    el_text.innerHTML = letters;
+    curnt_char_idx++;
+
+    // When a sentence is completed
+    if(letters === about_me_text[curnt_sentence_index]) {
+		clearInterval(interval_val);
+		setTimeout(()=> {
+			interval_val = setInterval(remove, 100);
+		}, 1000);
+	}
 }
+
+function remove(){
+    // get substring with 1 character deleted
+    var letter = about_me_text[curnt_sentence_index].substring(0,curnt_char_idx-1)
+    el_text.innerHTML = letter;
+    curnt_char_idx--;
+
+    // if letter is fully removed, start next sentence
+    if(letter === ''){
+        clearInterval(interval_val);
+        
+        // set the first sentence
+        if(curnt_sentence_index === about_me_text.length-1){
+            curnt_sentence_index = 0;
+        } else{
+            curnt_sentence_index++;
+        }
+        curnt_char_idx++;
+
+        // start next sentence 
+        setTimeout(() => {
+            interval_val = setInterval(type, 100)
+        }, 1000);
+    }
+
+}
+
+interval_val = setInterval(type, 100);

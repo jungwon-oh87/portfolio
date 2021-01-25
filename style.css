@@ -74,20 +74,56 @@
 }
 
 .showcase
-    .text {
+    .text-container {
     position: relative;
     z-index: 3;
 }
 
 .showcase
-    .text
-    p {
-    margin: 20px
-        0;
+    .text-container
+    .text {
+    display: inline-block;
+    letter-spacing: 2px;
+    color: rgb(
+        30,
+        128,
+        255
+    );
 }
 
 .showcase
-    .text
+    .text-container
+    .cursor {
+    display: inline-block;
+    width: 3px;
+    margin-left: 4px;
+    height: 28px;
+    background-color: rgb(
+        30,
+        128,
+        255
+    );
+    vertical-align: middle;
+    animation: blink
+        0.7s
+        /* step-end */
+        infinite;
+    animation-timing-function: steps(
+        5,
+        end
+    );
+}
+
+.showcase
+    .text-container
+    p {
+    margin: 20px
+        0;
+    max-width: 600px;
+}
+
+.showcase
+    .text-container
     a {
     display: inline-block;
     text-decoration: none;
@@ -99,7 +135,21 @@
     transition: 0.2s;
 }
 .showcase
-    .text
+    .text-container
     a:hover {
     letter-spacing: 4px;
+}
+
+@keyframes blink {
+    from,
+    to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgb(
+            255,
+            81,
+            0
+        );
+    }
 }

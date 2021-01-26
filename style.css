@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Potta+One&display=swap&family=Zhi+Mang+Xing&display=swap');
 
 * {
     margin: 0;
@@ -15,7 +15,6 @@
     min-height: 100vh;
     padding: 100px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background: #111;
@@ -43,12 +42,40 @@
     display: flex;
     cursor: pointer;
 }
-.lastname {
+
+.showcase
+    header
+    .logo
+    .lastname {
     margin: auto;
     font-weight: 100;
 }
-.toggle {
-    cursor: pointer;
+
+.showcase
+    .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.showcase
+    .menu
+    li {
+    list-style-type: none;
+    margin-right: 2rem;
+}
+
+.showcase
+    .menu
+    li:last-child {
+    margin-right: 0;
+}
+.showcase
+    .menu
+    li
+    a {
+    color: white;
+    text-decoration: none;
 }
 
 .showcase
@@ -81,14 +108,79 @@
 
 .showcase
     .text-container
+    .my-name {
+    font-family: 'Zhi Mang Xing',
+        cursive;
+    font-size: 65px;
+    background: rgb(
+        58,
+        47,
+        233
+    );
+    background: linear-gradient(
+        33deg,
+        rgba(
+                58,
+                47,
+                233,
+                1
+            )
+            0%,
+        rgba(
+                167,
+                65,
+                228,
+                1
+            )
+            27%,
+        rgba(
+                249,
+                72,
+                86,
+                1
+            )
+            100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showcase
+    .text-container
     .text {
     display: inline-block;
     letter-spacing: 2px;
-    color: rgb(
-        30,
-        128,
-        255
+    background: rgb(
+        58,
+        47,
+        233
     );
+    background: linear-gradient(
+        33deg,
+        rgba(
+                58,
+                47,
+                233,
+                1
+            )
+            0%,
+        rgba(
+                167,
+                65,
+                228,
+                1
+            )
+            27%,
+        rgba(
+                249,
+                72,
+                86,
+                1
+            )
+            100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .showcase
@@ -96,12 +188,13 @@
     .cursor {
     display: inline-block;
     width: 3px;
-    margin-left: 4px;
+    /* margin-left: 2px; */
     height: 28px;
-    background-color: rgb(
-        30,
-        128,
-        255
+    background-color: rgba(
+        249,
+        72,
+        86,
+        1
     );
     vertical-align: middle;
     animation: blink
@@ -137,7 +230,36 @@
 .showcase
     .text-container
     a:hover {
-    letter-spacing: 4px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.showcase
+    .social {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+.showcase
+    .social
+    li {
+    margin-right: 16px;
+}
+
+.showcase
+    .social
+    a {
+    color: inherit;
+}
+
+.signature {
+    z-index: 999;
+    position: absolute;
+    bottom: 15px;
 }
 
 @keyframes blink {

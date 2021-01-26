@@ -1,10 +1,11 @@
 var about_me_text = [
-    "Front-end Engineer",
-    "Deep Thinker",
-    "Javascript Enthusiast",
-    "Team Player",
-    "Believer",
-    "Proud Husband"
+    "Front-end Engineer.",
+    "Deep Thinker.",
+    "Javascript Enthusiast.",
+    "Team Player.",
+    "Believer.",
+    "Proud Husband.",
+    "Servant of two cats."
 ];
 
 var curnt_sentence_index = 0;

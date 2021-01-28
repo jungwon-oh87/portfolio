@@ -1,3 +1,4 @@
+/** HANDLE TYPING EFFECT **/
 var about_me_text = [
     "Front-end Engineer.",
     "Deep Thinker.",
@@ -58,3 +59,15 @@ function remove(){
 }
 
 interval_val = setInterval(type, 100);
+
+
+/** HANDLE MENU BAR **/
+var el_menu_bar = document.getElementById("menu-bar");
+
+var el_menu_bar_links = document.getElementById("menu-bar-links");
+
+el_menu_bar.addEventListener("click",()=>{
+    console.log("clicked");
+    el_menu_bar_links.classList.toggle("active");
+    el_menu_bar.classList.toggle("active");
+})

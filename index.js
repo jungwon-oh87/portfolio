@@ -66,8 +66,14 @@ var el_menu_bar = document.getElementById("menu-bar");
 
 var el_menu_bar_links = document.getElementById("menu-bar-links");
 
+var el_close = document.getElementById("close");
+
 el_menu_bar.addEventListener("click",()=>{
-    console.log("clicked");
-    el_menu_bar_links.classList.toggle("active");
-    el_menu_bar.classList.toggle("active");
+    el_menu_bar_links.style.width = '200px';
+    el_menu_bar_links.style.height = '200px';
+})
+
+el_close.addEventListener("click", ()=>{
+    el_menu_bar_links.style.width = '0px';
+    el_menu_bar_links.style.height = '0px';
 })
